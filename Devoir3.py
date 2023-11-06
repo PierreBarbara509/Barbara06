@@ -1,108 +1,106 @@
-# import copy
-# #1
-# dict={"numero1":"valeur1","numero2":"valeur2","nimero3":"valeur3"}
-# key=list(dict.keys())
-# valeur=list(dict.values())
-# Liste_valeur=list(dict.values())
-# print(key)
-# print(valeur)
-# print(Liste_valeur)
-# print()
+import copy #1
+dict={"numero1":"valeur1","numero2":"valeur2","nimero3":"valeur3"}
+key=list(dict.keys())
+valeur=list(dict.values())
+Liste_valeur=list(dict.values())
+print(key)
+print(valeur)
+print(Liste_valeur)
+print()
 
 
 #2
+Barbie = input("Tape yon vale: ")
+
+if Barbie.startswith("{") and Barbie.endswith("}"):
+    print("vale a gen akolad devan ak dèyè.")
+else:
+    print("vale a pa gen akolad devan ak dèyè.")
+    
+
+    
+3
+dictionnaire = {
+    "nom": "Barbara",
+    "age": 22,
+    "ville": "port-au-prince",
+    "pays": "Haiti"
+}
+
+keys= dictionnaire.keys()
+
+for keys in keys:
+    print(keys) 
+    print()   
+
+#4
+day = {
+    'keys1': 'valeur1',
+    'keys2': 'valeur2',
+    'keys3': 'valeur3'
+}
+
+for valeur in day.values():
+    print(valeur)
+    print()
+    
+
+
+#5
+
+dictionnaire1= {"key1": "value1", "key2": ["value2.1", "value2.2"], "key3": {"basekey1": "basevalue1"}}
+dictionnaire2= copy.deepcopy(dictionnaire1)
+
+
+dictionnaire2["key2"][0] = "reponse_value2.1"
+dictionnaire2["key3"]["basekey1"] = "poste_basevalue1"
+
+print("dictionnaire1:", dictionnaire1)
+print("dictionnaire2:", dictionnaire2)
+print()
  
 
-    
-    
-    
-#3
-# dictionnaire = {
-#     "nom": "Barbara",
-#     "age": 22,
-#     "ville": "port-au-prince",
-#     "pays": "Haiti"
-# }
 
-# keys= dictionnaire.keys()
+#6
 
-# for keys in keys:
-#     print(keys) 
-#     print()   
+dictionnaire = {'kle1': 'valeur1', 'kle2': 'valeur2', 'kle3': 'valeur3'}
 
-# #4
-# day = {
-#     'keys1': 'valeur1',
-#     'keys2': 'valeur2',
-#     'keys3': 'valeur3'
-# }
+liste = {kle: f'_{valeur}_' for kle, valeur in dictionnaire.items()}
 
-# for valeur in day.values():
-#     print(valeur)
-#     print()
-    
-
-
-# #5
-
-# diksyone_orijinal = {"kle1": "valè1", "kle2": ["valè2.1", "valè2.2"], "kle3": {"subkle1": "subvalè1"}}
-
-# kopi_diksyone = copy.deepcopy(diksyone_orijinal)
-
-
-# kopi_diksyone["kle2"][0] = "nouvo_valè2.1"
-# kopi_diksyone["kle3"]["subkle1"] = "nouvo_subvalè1"
-
-# print("Diksyone orijinal:", diksyone_orijinal)
-# # Diksyone orijinal: {'kle1': 'valè1', 'kle2': ['valè2.1', 'valè2.2'], 'kle3': {'subkle1': 'subvalè1'}}
-
-
-# print("Kopi a:", kopi_diksyone)
-# print()
-#  #Kopi a: {'kle1': 'valè1', 'kle2': ['nouvo_valè2.1', 'valè2.2'], 'kle3': {'subkle1': 'nouvo_subvalè1'}}
+print(liste)
+print()
 
 
 
-# #6
+#7
+couple = {'key1': '123', 'key2': 'abc', 'key3': '456', 'key4': 'def'}
 
-# diksyone = {'kle1': 'valè1', 'kle2': 'valè2', 'kle3': 'valè3'}
+nombre = {key: valeur for key, valeur in couple.items() if valeur.isdigit()}
+print(nombre)
+print()
 
-# nouvo_diksyone = {kle: f'_{valè}_' for kle, valè in diksyone.items()}
+#8
+effort = {'k1': 'valè1', 'k2': 'valè2', 'k3': 'valè3'}
 
-# print(nouvo_diksyone)
-# print()
+derouler = [(k, v) for k, v in effort.items()]
+print(derouler)
+print()
+#9
+partage=["base1","base2","base3"]
+message={}
+for base in partage:
+    marche=input(f"Antre definition'{base}': ")
+    message[base]=marche
+print(message)    
+print()
+#10
+liquide1={"pasta":2,"fragrance":3,"texapon":4,"formol":5}
+liquide2={"sel":6,"fragrance":3,"texapon":4,"pasta":2}
 
-
-
-# #7
-# couple = {'key1': '123', 'key2': 'abc', 'key3': '456', 'key4': 'def'}
-
-# nombre = {key: valeur for key, valeur in couple.items() if valeur.isdigit()}
-# print(nombre)
-# print()
-
-# #8
-# effort = {'k1': 'valè1', 'k2': 'valè2', 'k3': 'valè3'}
-
-# derouler = [(k, v) for k, v in effort.items()]
-# print(derouler)
-# print()
-# #9
-# partage=["base1","base2","base3"]
-# message={}
-# for base in partage:
-#     marche=input(f"Antre definition'{base}': ")
-#     message[base]=marche
-# print(message)    
-# print()
-# #10
-# liquide1={"pasta":2,"fragrance":3,"texapon":4,"formol":5}
-# liquide2={"sel":6,"fragrance":3,"texapon":4,"pasta":2}
-
-# somme={}
-# for key,value in liquide1.items():
-#     if key in liquide2 and liquide2[key]==value:
-#         somme[key]=value
+somme={}
+for key,value in liquide1.items():
+    if key in liquide2 and liquide2[key]==value:
+        somme[key]=value
         
-# print(somme)
-# print()        
+print(somme)
+print()        
